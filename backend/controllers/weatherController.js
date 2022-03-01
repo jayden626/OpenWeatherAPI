@@ -1,5 +1,7 @@
 const asyncHandler = require('express-async-handler')
 
+const Daily = require('../models/dailyModel')
+
 const getWeather = asyncHandler(async (req, res) => {
     // if(!req.params.id){
     //     res.status(400)
