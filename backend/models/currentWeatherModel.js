@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const dailySchema = mongoose.Schema({
+const currentWeatherSchema = mongoose.Schema({
     coord:{
         lat: Number,
         lon: Number
@@ -19,6 +19,8 @@ const dailySchema = mongoose.Schema({
     timezone: Number,
     name: String,
     id: Number
+},{
+    timestamps: true
 })
 
-module.exports = mongoose.model('Daily', dailySchema)
+module.exports = mongoose.model('CurrentWeather', currentWeatherSchema)
