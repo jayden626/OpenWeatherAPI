@@ -1,16 +1,16 @@
 const mongoose = require('mongoose')
 
 const currentWeatherSchema = mongoose.Schema({
-    coord:{
+    coord: {
         lat: Number,
         lon: Number
     },
-    weather: {
+    weather: [{
         id: Number,
         main: String,
         description: String,
         icon: String
-    },
+    }],
     main: {
         temp: Number,
         feels_like: Number,

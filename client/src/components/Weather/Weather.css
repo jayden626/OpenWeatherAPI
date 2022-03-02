@@ -1,0 +1,37 @@
+.weather__container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    
+    border: 1px solid;
+    border-radius: 20px;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(85,226,255,1) 100%);
+
+    margin: 20px;
+    padding: 20px;
+}
+
+.weather__title > h1 {
+    margin: 10px;
+}
+
+.weather__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.weather__additional_info {
+    font-size: 0.6em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.weather__additional_info > div > p {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5px;
+}
