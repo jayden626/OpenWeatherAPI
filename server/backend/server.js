@@ -8,11 +8,13 @@ const port = process.env.PORT || 5000
 
 connectDB()
 
+//set up the app
 const app = express()
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//set up the weather api
 app.use('/api/weather', require('./routes/weatherRoutes'))
 
 app.use(errorHandler)

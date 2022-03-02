@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+// Used to connect to the database
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI)

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+//mongoose schema for the current weather object
 const currentWeatherSchema = mongoose.Schema({
     coord: {
         lat: Number,
