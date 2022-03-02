@@ -6,8 +6,10 @@ const currentWeatherSchema = mongoose.Schema({
         lon: Number
     },
     weather: {
+        id: Number,
         main: String,
-        description: String
+        description: String,
+        icon: String
     },
     main: {
         temp: Number,
