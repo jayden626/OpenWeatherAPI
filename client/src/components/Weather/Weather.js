@@ -1,14 +1,16 @@
-import React from "react"
+import React, { useEffect } from "react"
 import useFetch from "../../hooks/useFetch"
 import "./Weather.css"
 
-const Weather = ({lat, lon}) => {
+const Weather = ({lat, lon, setTimezone}) => {
 
     const { data, error, loading, refetch } = useFetch(`http://localhost:5000/api/weather?lat=${lat}&lon=${lon}`)
-
+    useEffect(_=>{
+        setTimezone(data?.timezone);
+    }, [data]);
     if( loading ) return <h1>Loading...</h1>
     if( error ) return <h1>Error</h1>
-    console.log(data)
+    
     if( data ){
         return (
             <div className="weather__container">

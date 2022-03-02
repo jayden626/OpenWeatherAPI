@@ -1,8 +1,7 @@
-// import logo from './logo.svg';
 import './App.css';
 import Weather from './components/Weather/Weather';
 import Navbar from './components/Navbar/Navbar';
-import { useState } from 'react';
+import WeatherList from './components/WeatherList/WeatherList';
 
 function App() {
   return (
@@ -11,8 +10,7 @@ function App() {
         <Navbar title="OpenWeatherAPI"/>
       </header>
       <main>
-        <Weather lat={-32.8679} lon={151.2073}/>
-        <Weather lat={-33.8679} lon={151.2073}/>
+        <WeatherList/>
       </main>
     </div>
   );

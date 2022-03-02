@@ -12,18 +12,5 @@
   color: black;
 }
 
-main {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
 
-  max-width:720px;
-}
-
-@media only screen and (max-width: 720px) {
-  main {
-    flex-direction: column;
-  }
-}
 
