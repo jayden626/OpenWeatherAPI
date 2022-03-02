@@ -11,13 +11,17 @@ const WeatherList = () => {
     const [timezone2, setTimezone2] = useState(null)
     //calculate the time difference between them
     let timeDifference = calculateTimezoneDifference(timezone1,timezone2)
+
+    // You may uncomment one of these lines to change which cities are being observed
+    // let coords = [{lat:-27.4705, lon:153.0260}, {lat:-34.9285, lon:138.6007}] //Brisbane - Adelaide
+    // let coords = [{lat:21.3156, lon:-157.8580}, {lat:-33.8679, lon:151.2073}] //Honolulu - Sydney
+    let coords = [{lat:-32.9166, lon:151.7500}, {lat:49.2462, lon: -123.1162}] //Newcastle, NSW - Vancouver
     
     return(
         <>
             <div className="weatherList__content">
-                <Weather lat={-27.4705} lon={153.0260} setTimezone={setTimezone1}/>
-                {/* <Weather lat={-33.8679} lon={151.2073} setTimezone={setTimezone2}/> */}
-                <Weather lat={-34.9285} lon={138.6007} setTimezone={setTimezone2}/>
+                <Weather lat={coords[0].lat} lon={coords[0].lon} setTimezone={setTimezone1}/>
+                <Weather lat={coords[1].lat} lon={coords[1].lon} setTimezone={setTimezone2}/>
             </div>
             <div>
                 <p>Time difference</p>
